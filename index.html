@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+
+<head>
+  <title>I_HACK</title>
+  <link rel="icon" href="https://ecell.in/esummit/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSs\styleS.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!--fontawesome cdn-->
+  <script src="https://kit.fontawesome.com/f21928e3a0.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+ 
+
+
+
+    <!--navbar start-->
+    <div id="mydiv">
+      <div id="mydivheader"> <button type="button" class="btn btn-info" data-toggle="collapse"
+          data-target="#demo">NAVIGATION(have fun dragging me!)</button></div>
+      <div id="demo" class="collapse">
+
+        <a class="navopt" href="#introduction">HOME</a><br>
+        <a class="navopt" href="#about">ABOUT</a><br>
+        <a class="navopt" href="#details">SPECIFICATIONS</a><br>
+        <a class="navopt" href="#incentives">INCENTIVES</a><br>
+
+
+        <!-- <a class="navopt" href="#cry">CRITERIA</a><br> -->
+        <!-- <a class="navopt" href="#sponsors">SPONSORS</a><br> -->
+        <a class="navopt" href="#timeline">TIMELINE</a><br>
+        <a class="navopt" href="#FAQS">FAQ</a><br>
+        <a class="navopt" href="#footer">CONTACT</a>
+      </div>
+
+
+
+
+
+    </div>
+
+  <script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("mydiv"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  </script>
+
+
+
+  <!---navbar end-->
+
+  <section id="introduction">
+    <div class="jumbotron text-center">
+      <img class="logo" src="https://public-ecell.s3.ap-south-1.amazonaws.com/website/E-Cell.png">
+
+      <div class="intro">
+
+        <h1 class="presenter"> E-CELL IIT BOMBAY</h1>
+        <BR>
+        <BR>
+        <h2>PRESENTS</h2>
+        <BR>
+        <BR>
+        <br>
+
+        <br>
+        <h1 class="titl">SONAE <b>E</b>-BIKE Challenge</h1>
+
+
+
+      </div>
+  </section>
+  <div class="containe">
+
+  <p class="text-center quote1"><b>“knowledge is power, but enthusiasm pulls the switch.”</b> ― Ivern Ball</p>
+
+
+  <section id="about">
+
+
+
+    <br>
+    <H1 class="text-center hdg"> About Sonae e-bike Challenge</H1>
+    <p class="text-center aboutprog">Sonae EV is an electric mobility company working towards providing electric two
+      wheeler and charging stations to consumers. Our team comes from automobile sector and we are building complete
+      ecosystem of vehicles, charging station, swapping station, IOT Integrations</p>
+    <div class="row">
+
+      <div class="col-lg-6 feature-box">
+
+        <div class="card-body">
+          <br>
+          <img class="abtimg" src="images/design.jpg">
+          <br>
+          <br>
+          <!-- <img class="inimg" src="images/inspireimg.png"> -->
+          <div class="abtpara">
+            <h3 class="abthead">About the Design Challenge</h3>
+            <p>
+
+              This challenge will test skills and thinking powers of students with regards to a workable E-Bike design.
+              We expect the students to be high on research on the latest in E-Bikes in the world and then put their
+              knowledge, skills and innovation powers to create an E-Bike design that fits best for Indian roads which
+              have international standard</p>
+            <br>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 feature-box">
+
+        <div class="card-body">
+          <br>
+          <img class="abtimg" src="images/visionebike.jpg">
+          <br>
+          <br>
+
+          <div class="abtpara">
+            <h3 class="abthead">The vision of the Challenge</h3>
+            <p>To help eligible students create an E-Bike from scratch and make it commercially viable for the market.
+              This will be a live experience for the students that will make them industry ready and productive in their
+              professional endeavors. The winning teams can be offered permanent employment at Research team of Sonae EV
+              Pvt. Ltd.</p>
+
+
+            <br>
+
+          </div>
+
+        </div>
+
+      </div>
+      <a href=""><button type="button" class="btn btn-dark btn-lg download-button reg-button"></i>REGISTER</button></a>
+  </section>
+  <br>
+
+  <p class="text-center quote1"><b>“It takes a great man to be a good listener.”</b> ― Calvin Coolidge</p>
+
+  <section id="details">
+
+    <br>
+    <h1 class="hdg">Challenge Specifications</h1>
+
+    <div class="row">
+
+      <div class="col-lg-6 feature-box">
+
+        <div class="card-body">
+
+          <br>
+          <!-- <img class="inimg" src="images/inspireimg.png"> -->
+          <div class="abtpara">
+            <h3>Specification to work on City Speed Commuter Bike:</h3>
+            <br>
+            <ul class="detlist">
+              <li>Top speed:80+ Kmph</li>
+              <li>Range:150+</li>
+              <li>Kerb weight: Less than 150kg</li>
+              <li>Payload capacity: 250kg</li>
+              <li>Gradebility:21.8 Degree/40%</li>
+              <li>Motor (Hub/Center): 2KW-4KW</li>
+              <li>Battery: 60V /72V Platform</li>
+              <li>Frame: Tubular Lightweight</li>
+              <li>Breaking system to meet CMVR</li>
+              <li>Ground Clearance: More than 140mm. </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 feature-box">
+
+        <div class="card-body">
+
+          <br>
+          <!-- <img class="inimg" src="images/inspireimg.png"> -->
+          <div class="abtpara">
+            <h3>Design Submission Details:</h3>
+            <br>
+            <ul class="detlist">
+              <li>Masters Layout & Design Report.</li>
+              <li>Powertrain Simulations.</li>
+              <li>Dimension calculation, CAE Drawings and Reports.</li>
+              <li>Aesthetic Drawings</li>
+              <li>Brakes, Suspension, Cluster working.</li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+
+  </section>
+  <br>
+  <p class="text-center quote1"><b>“Winning has a value for ego, but participation has value for life.”</b> ― Debasish
+    Mridha</p>
+
+  <section id="incentives">
+    <br>
+
+    <H1 class="text-center hdg"> WHY PARTICIPATE?</H1>
+
+    <div class="row text-center">
+
+      <div class="col-lg-4 feature-box">
+        <img class="inimg" src="images/merchandise.png">
+        <!-- <img class="inimg" src="images/inspireimg.png"> -->
+
+        <!-- Prizes 
+
+
+
+
+
+ -->
+        <h3>Merchandise</h3>
+        <p>All participating team members will get branded merchandise and participant certificates.</p>
+      </div>
+      <div class="col-lg-4 feature-box">
+        <img class="inimg" src="images/rupeeimg.png">
+
+
+        <!-- <img class="inimg" src="images/rupeeimg.png"> -->
+
+        <h3>Prize money and LoRs</h3>
+        <p>Top 10 teams will get prizes work Rs.10k per team and Letter of recommendations for team members.</p>
+      </div>
+      <div class="col-lg-4 feature-box">
+        <img class="inimg" src="images/job.png">
+
+        <!-- <img class="inimg" src="images/insightimg.png"> -->
+        <h3>Full time opportunities</h3>
+        <p>Top 3 Team will get Prices worth Rs.30k per team and offered full time role at Sonae EV Research Team.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <br>
+
+
+  <p class="text-center quote1"><b>“The fundamental criterion for judging any procedure is the justice of its likely
+      results.”</b> ― John Rawls</p>
+
+
+
+
+
+
+  <!-- <section id="cry">
+          <br>
+          <h1 class="text-center">JUDGING CRITERIA</h1>
+          <br>
+
+
+          <div class="row text-center">
+            <div class="col-lg-3 col-sm-6 pink">
+              <i class="fas fa-laptop-code fa-4x"></i><br>
+              <p>TECHNICAL APPROACH</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 red">
+              <i class="fas fa-recycle fa-4x"></i><br>
+              <p>REUSABILITY</p>    
+            </div>
+            <div class="col-lg-3 col-sm-6 blue">
+              <i class="fas fa-user fa-4x"></i><br>
+              <p>USER INTERFACE</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 grey">
+              <i class="fas fa-lock fa-4x"></i><br>
+              <p>SECURITY</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 green">
+              <i class="fas fa-tachometer-alt fa-4x"></i><br>
+              <p>PERFORMANCE</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 yellow">
+              <i class="fas fa-rupee-sign fa-4x"></i><br>
+              <p>BUSINESS VALUE TO BANK</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 purple">
+              <i class="fas fa-lightbulb fa-4x"></i><br>
+              <p>INNOVATION</p>
+            </div>
+            <div class="col-lg-3 col-sm-6 orange">
+              <i class="fas fa-thumbs-up fa-4x"></i><br>
+              <p>ADOPTION OF SOLUTION</p>
+            </div>
+            
+          </div>
+          
+
+    
+        </section>
+        <br>
+        <p class="text-center quote1"><b>“<i>S</i>piritual <i>P</i>erson <i>O</i>ffering <i>N</i>ecessary <i>S</i>uggestions <i>O</i>n <i>R</i>ecovery.”</b> ― Gargre</p>
+
+
+
+        <section id="sponsors">
+          <br>
+          <h1 class="text-center">SPONSORS</h1>
+         
+
+          
+           <div class="row" >
+
+             <div class="col-lg-6 col-sm-6 sponsor-column">
+
+            
+
+               
+              <img class="spon" src="images/wiprob.png">
+
+            
+            </div>
+          
+            <div class="col-lg-6 col-sm-6 sponsor-column">
+              
+              <img class="spon" src="images/ruminds.png">
+            </div>
+          
+
+           </div>
+
+       
+          <br>
+        
+          <h1 class="text-center">HACKATHON PARTNERS</h1>
+          <br>
+          
+          <div class="row">
+            <div class="col-lg-3 col-sm-4 part-column">
+              <img class="partimg" src="images/dev.png">
+            </div>
+            <div class="col-lg-3 col-sm-4 part-column">
+              <img class="partimg" src="images/mat.png">
+            </div>
+            <div class="col-lg-3  col-sm-4 part-column">
+              <img class="partimg" src="images/portis.png">
+            </div>
+            <div class="col-lg-3  col-sm-4 part-column">
+              <img class="partimg" src="images/tenxgrowth.png">
+            </div>
+            <div class="col-lg-4  col-sm-4 part-column">
+              <img class="partimg" src="images/tez.png">
+            </div>
+            <div class="col-lg-4  col-sm-4 part-column">
+              <img class="partimg" src="images/Startupindia.png">
+            </div>
+            <div class=" col-lg-4   part-column">
+              <img class="partimg" src="images/IoTIOT..png">
+            </div>
+           
+          </div>
+
+          <div class="col-12 text-center" style="font-size: 20px; text-align: center">
+            <p href="#" class="" style="font-size: 20px">Interested in becoming a sponsor? E-mail us at</p><br>
+             <a href="" class="text-center text-decoration-none " style="color: #6674A3;">ihack@ecell.in</a>
+          </div>
+
+        <BR>
+          
+        </section>
+        <br>
+        <p class="text-center quote1"><b>“It takes a great man to be a good listener.”</b> ― Calvin Coolidge</p>
+        
+
+        <section id="team">
+          <br>
+          <h1 class="text-center">SPEAKERS & JUDGES</h1>
+          <br>
+          <div class="row text-center">
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/sanjivk.jpg">
+              <br>
+              <p> <b>Sanjiv Kapoor</b>- CTO,Truminds</p>
+             
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img  class="speakimg" src="images/shaktig.jpg">
+              <br>
+              <p> <b> Shakti Goap</b>- FOUNDER,Devfolio</p>
+            
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/shivak.jpg">
+              <br>
+              <p><b>Chetan Kabu</b>- VP Engineering,Truminds</p>
+              
+            </div>
+
+            <div class="col-lg-4 col-sm-6 speak-column">
+              <img class="speakimg" src="images/graceg.jpg">
+              <br>
+              <p><b></b>Grace Guo</b>- Founding Team,Dunya labs</p>
+             
+            </div>
+
+            <div class="col-lg-3 col-sm-6 speak-column">
+              <img class="speakimg" src="images/kca.jpg">
+              <br>
+              <p><b>KC Ayyagari</b>- Program Manager , Google cloud</p>
+              
+            </div>
+            <br>
+            <br>
+
+            
+          </div>
+
+        </section>  -->
+
+
+
+
+
+  <!--timeline starts-->
+
+
+
+  <section id="timeline" class="timeline">
+    <br>
+    <h1 class="tmlnhead">TIMELINE</h1>
+
+
+
+    <ol>
+      <li>
+        <div>
+          <time>5th December 2021</time> Registration Opens:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>15th December 2021</time> Rule book release and teams can start work:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>7th January 2021</time> Registration Closes:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>9th January 2022</time>Introduction Session
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>16th January 2022</time>Feedback to teams:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time> 23rd January 2022</time> First Submission and feedback:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>30th January 2022 </time>Final Submission:
+        </div>
+      </li>
+      <li>
+        <div>
+          <time> 1st February 2022</time>Top 10 teams to be announced on
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>3rd February</time>Presentation of Top 10 teams :
+        </div>
+      </li>
+      <li>
+        <div>
+          <time> February & March.</time>Top 3 teams will work with Sonae team
+        </div>
+      </li>
+
+
+    </ol>
+
+    <div class="arrows">
+      <button class="arrow arrow__prev disabled" disabled>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_prev.svg" alt="prev timeline arrow">
+      </button>
+      <button class="arrow arrow__next">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/arrow_next.svg" alt="next timeline arrow">
+      </button>
+    </div>
+    <script>(function () {
+
+        // VARIABLES
+        const timeline = document.querySelector(".timeline ol"),
+          elH = document.querySelectorAll(".timeline li > div"),
+          arrows = document.querySelectorAll(".timeline .arrows .arrow"),
+          arrowPrev = document.querySelector(".timeline .arrows .arrow__prev"),
+          arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
+          firstItem = document.querySelector(".timeline li:first-child"),
+          lastItem = document.querySelector(".timeline li:last-child"),
+          xScrolling = 280,
+          disabledClass = "disabled";
+
+        // START
+        window.addEventListener("load", init);
+
+        function init() {
+          setEqualHeights(elH);
+          animateTl(xScrolling, arrows, timeline);
+          setSwipeFn(timeline, arrowPrev, arrowNext);
+          setKeyboardFn(arrowPrev, arrowNext);
+        }
+
+        // SET EQUAL HEIGHTS
+        function setEqualHeights(el) {
+          let counter = 0;
+          for (let i = 0; i < el.length; i++) {
+            const singleHeight = el[i].offsetHeight;
+
+            if (counter < singleHeight) {
+              counter = singleHeight;
+            }
+          }
+
+          for (let i = 0; i < el.length; i++) {
+            el[i].style.height = `${counter}px`;
+          }
+        }
+
+        // CHECK IF AN ELEMENT IS IN VIEWPORT
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // SET STATE OF PREV/NEXT ARROWS
+        function setBtnState(el, flag = true) {
+          if (flag) {
+            el.classList.add(disabledClass);
+          } else {
+            if (el.classList.contains(disabledClass)) {
+              el.classList.remove(disabledClass);
+            }
+            el.disabled = false;
+          }
+        }
+
+        // ANIMATE TIMELINE
+        function animateTl(scrolling, el, tl) {
+          let counter = 0;
+          for (let i = 0; i < el.length; i++) {
+            el[i].addEventListener("click", function () {
+              if (!arrowPrev.disabled) {
+                arrowPrev.disabled = true;
+              }
+              if (!arrowNext.disabled) {
+                arrowNext.disabled = true;
+              }
+              const sign = (this.classList.contains("arrow__prev")) ? "" : "-";
+              if (counter === 0) {
+                tl.style.transform = `translateX(-${scrolling}px)`;
+              } else {
+                const tlStyle = getComputedStyle(tl);
+                // add more browser prefixes if needed here
+                const tlTransform = tlStyle.getPropertyValue("-webkit-transform") || tlStyle.getPropertyValue("transform");
+                const values = parseInt(tlTransform.split(",")[4]) + parseInt(`${sign}${scrolling}`);
+                tl.style.transform = `translateX(${values}px)`;
+              }
+
+              setTimeout(() => {
+                isElementInViewport(firstItem) ? setBtnState(arrowPrev) : setBtnState(arrowPrev, false);
+                isElementInViewport(lastItem) ? setBtnState(arrowNext) : setBtnState(arrowNext, false);
+              }, 1100);
+
+              counter++;
+            });
+          }
+        }
+
+        // ADD SWIPE SUPPORT FOR TOUCH DEVICES
+        function setSwipeFn(tl, prev, next) {
+          const hammer = new Hammer(tl);
+          hammer.on("swipeleft", () => next.click());
+          hammer.on("swiperight", () => prev.click());
+        }
+
+        // ADD BASIC KEYBOARD FUNCTIONALITY
+        function setKeyboardFn(prev, next) {
+          document.addEventListener("keydown", (e) => {
+            if ((e.which === 37) || (e.which === 39)) {
+              const timelineOfTop = timeline.offsetTop;
+              const y = window.pageYOffset;
+              if (timelineOfTop !== y) {
+                window.scrollTo(0, timelineOfTop);
+              }
+              if (e.which === 37) {
+                prev.click();
+              } else if (e.which === 39) {
+                next.click();
+              }
+            }
+          });
+        }
+
+      })();</script>
+  </section>
+  <!-- partial -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>  -->
+
+
+
+
+  <!--timline end-->
+
+  <br>
+  <p class="text-center quote1"><b>“Without a good question,a good answer has no pace to go.”</b> ― Clayton Christensen
+  </p>
+  <section id="FAQS">
+
+    <br>
+    <h1 class="text-center">HAVE QUESTIONS?</h1>
+    <br>
+    <br>
+
+
+
+    <div class="container">
+
+
+      <div id="accordian">
+        <div class="card text-center">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              What should be the team composition for participating in the challenge
+
+
+
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse" data-parent="#accordion">
+            <div class="card-body faqans">
+              Team can have 1 member to 5 members from various backgrounds and expertise to design Electric Bike. Team
+              can have 1 mentor from college or Industry for guidance
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+      <div class="text-center">
+        <a style="color: black;" href="#footer">Still have Queries? Contact us!</a>
+      </div>
+
+
+  </section>
+
+
+
+  <footer id="footer">
+    <br>
+    <br>
+
+    <div class="row text-center">
+      <div class="col-lg-6 col-sm-6 footbox">
+
+        <p>Harshit Modi : 6352698962</p>
+        <p>harshit@ecell.in</p>
+      </div>
+
+      <div class="col-lg-6 col-sm-6 footbox">
+        <h4>FOLLOW US ON</h4>
+        <BR>
+        <i class="fab fa-facebook-square fa-2x"></i>
+        <i class="fab fa-instagram-square fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+        <i class="fab fa-linkedin fa-2x"></i>
+      </div>
+
+
+
+
+      <a href="#introduction">
+        <i class="fas fa-arrow-circle-up fa-4x " style="color:rgb(84, 235, 210);"></i>
+      </a>
+
+
+
+    </div>
+
+  </footer>
+
+
+  </div>
+</body>
+
+</html>

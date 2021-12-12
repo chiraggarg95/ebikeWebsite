@@ -1,0 +1,523 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+  --bgclr: #1d3557;
+  --blue: #457b9d;
+  --ltblue: #a8dadc;
+  --white: #f1faee;
+  --red: #e63946;
+}
+
+.reg-button{
+position: relative;
+left: 600px;
+
+}
+.jumbotron{
+    /* background-image: url('../images/hack.jpg') ; */
+    background-color: #1d3557;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    border-radius: 0px!important;
+}
+
+
+.jumbotron img{
+    width: auto;
+    height: 100px;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    
+}
+.presenter{
+    font-weight: 800;
+    font-size: 50px;
+}
+.titl{
+    font-weight: 800;
+    font-size: 100px;
+}
+@media(max-width:1028px){
+    .jumbotron img{
+        width: 100px;
+        height: 50px;
+       position: absolute;
+       left: 10px;
+       top: 0px;
+    }
+    .presenter{
+        font-weight: 600;
+        font-size: 40px;
+    }
+    .titl{
+        font-weight: 500;
+        font-size: 50px;
+        position: relative;
+        bottom: 10px;
+        
+    }
+    .spon{
+        height: 100px;
+        width: 200px;
+    }
+    .partimg{
+        height: 50px;
+        width: 100px;
+       
+    }
+}
+.inimg{
+    height: 200px;
+    width: 200px;
+    
+}
+
+  #incentives{
+    /* background-image: url('../images/simple.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bgclr);
+      color: var(--white);
+      
+      
+      
+  }
+ 
+  .hdg{
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+
+  }
+
+.quote1{
+    /* color: white; */
+   font-family: cursive;
+   margin-top: 0px;
+   background-color: var(--blue);
+   color: var(--ltblue);
+   padding: 1em;
+   width: 100%;
+   font-size: 1.1em;
+}
+/* body{
+    background-color: black;
+} */
+.aboutprog{
+    margin-left:10px;
+    margin-right: 10px;
+}
+.abtimg{
+    height: 400px;
+    width: 400px;
+}
+#about{
+    /* background-image: url('../images/ai4.jpg'); */
+    background-color: var(--bgclr);
+    background-size: cover;
+    background-position: center;
+    
+}
+.abtcrd{
+    background-image: url('../images/hackthon2.jpg');
+}
+.abtpara{
+    background-color: white;
+}
+.lni{
+   font-size: large;
+}
+.fas{
+    padding-top:10px;
+}
+#cry{
+    background-color: chocolate;
+   color:white
+}
+.red{
+    background-color: red;
+}
+.pink{
+    background-color: pink;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: cornflowerblue;
+}
+.green{
+    background-color: greenyellow;
+}
+.grey{
+    background-color: grey;
+}
+.orange{
+    background-color: orange;
+}
+.purple{
+    background-color: rgb(248, 63, 248);
+}
+.fa-4x{
+    padding: 10px;
+    color: black;
+}
+#sponsors{
+   background-color: coral;
+    text-align: center;
+    padding: 3% 2%;
+}
+i{
+    font-weight: 400;
+}   
+ 
+.sponsor-column{
+    
+    padding-top:10px;
+    padding-bottom: 10px;
+  }
+.feature-box{
+    padding: 3% 2%;
+    text-align: center;
+    color: black;
+    
+}
+ body{
+    background-color: var(--bgclr);
+    color: white;
+} 
+.partimg{
+    height: 100px;
+    width: 200px;
+   
+}
+.part-column{
+    padding: 3% 2%; 
+}
+#team{
+    background-color:rgb(55, 56, 54);
+    color: chartreuse;
+   
+}
+.speakimg{
+    border: 5px solid chartreuse;
+    height: 200px;
+    width: 200px;
+}
+.speak-column{
+    padding: 3% 2%;  
+}
+#FAQS{
+    /* background-color: darkgray; */
+    
+    /* background-color: chocolate; */
+    padding-bottom: 40px;
+    color: white;
+}
+#contact-us{
+    background-color: black;
+    color: white;
+    margin-bottom:0;
+}
+.fa-2x{
+    margin-left: 4px;
+    color: white;
+}
+#footer{
+    /* background-color: black; */
+    color: white;
+    padding-bottom: 20px;
+}
+
+#cry{
+    padding: 0% 2%; 
+}
+
+
+/*timeline css*/
+
+
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+  
+ 
+ 
+  
+}
+
+.timeline ol {
+  font-size: 0;
+  width: 100vw;
+  padding: 250px 0;
+  
+  transition: all 1s;
+}
+.abthead{
+  padding: 10px;
+}
+.abtpara{
+  padding: 10px;
+}
+.tmlnhead{
+  text-align: center;
+}
+
+#details{
+  background-color: var(--bgclr);
+  text-align: center;
+  /* background-image: url('../images/hackathon4.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+.detlist{
+  text-align: center;
+  list-style-type: none;
+}
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 160px;
+  height: 3px;
+  background: #fff;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+.timeline ol li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+   left: calc(100% + 0.5px);
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #F45B69;
+}
+
+.timeline ol li div {
+  position: absolute;
+   left: calc(100% + 0.5px); 
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: black;
+  background: white;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: .5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+  .timeline ol,
+  .timeline ol li {
+    width: auto; 
+  }
+  
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+  
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+  
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+  
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+  
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+  
+  .timeline ol li div {
+    position: static;
+  }
+  
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+  
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    
+  }
+  
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+}
+
+
+
+
+
+.logom{
+    position:relative;
+    top:30px;
+}
+
+/*navbar draggable*/
+
+  #mydiv {
+    
+    position: absolute;
+    z-index: 9;
+    background-color: transparent;
+    text-align: center;
+    /* border: 1px solid #d3d3d3; */
+    position:sticky;
+    top:50px;
+    left:900px;
+    width:200px;
+    height:0px;
+  }
+
+  .fa-arrow-circle-up{
+      position: fixed;
+      bottom:10px;
+      right: 10px;
+      z-index: 1px;
+
+  }
+  
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: transparent;
+    color: #fff;
+  }
+  .navopt{
+      color: white;
+  }
+/*navbar draggable end*/
+#introduction{
+    position:relative;
+    /* bottom: 10px; */
+}
+#timeline{
+    margin-top: 0px;
+}
+
+.faqans{
+    color: black;
+}
+
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
