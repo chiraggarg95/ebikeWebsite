@@ -1,6 +1,9 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 :root{
@@ -11,56 +14,102 @@
   --red: #e63946;
 }
 
-.reg-button{
+/* .reg-button{
 position: relative;
 left: 600px;
 
-}
+} */
 .jumbotron{
     /* background-image: url('../images/hack.jpg') ; */
     background-color: #1d3557;
-    height: 100vh;
+    /* height: 100vh; */
     background-size: cover;
     background-position: center;
     color: #ffffff;
     border-radius: 0px!important;
 }
 
-
-.jumbotron img{
-    width: auto;
-    height: 100px;
+.logo-ecell{
+  height: 4rem;
+  width: auto;
     position: absolute;
-    left: 40px;
+    left: 70px;
     top: 30px;
-    
 }
+
+.logo-wrap-sonae img{
+  height: 6rem;
+  width: auto;
+  position: absolute;
+    right: 70px;
+    top: 30px;
+}
+
 .presenter{
-    font-weight: 800;
-    font-size: 50px;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.presenter-sml{
+    font-weight: 500;
+    font-size: 2rem;
 }
 .titl{
-    font-weight: 800;
-    font-size: 100px;
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
 }
 @media(max-width:1028px){
-    .jumbotron img{
-        width: 100px;
-        height: 50px;
+    .logo-ecell{
+      height: 3rem;
+      width: auto;
        position: absolute;
-       left: 10px;
-       top: 0px;
+       left: 20px;
+       top: 20px;
+    }
+    .logo-wrap-sonae img{
+      height: 3rem;
+      width: auto;
+      position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .intro{
+      margin-top: 3.5rem !important;
     }
     .presenter{
-        font-weight: 600;
-        font-size: 40px;
+        font-size: 1.5rem;
+    }
+    .presenter-sml{
+        font-size: 1rem;
     }
     .titl{
-        font-weight: 500;
-        font-size: 50px;
+        font-weight: 600;
+        font-size: 2rem;
         position: relative;
         bottom: 10px;
         
+    }
+    .hdg{
+      font-size: 1.5rem;
+    }
+    .abthead, .incen-hd{
+      font-size: 1.2rem;
+    }
+    .abtpara p, .incen-txt{
+      font-size: 0.9rem;
+      padding: 0.8rem;
+    }
+    .card-body{
+      padding: 0.5rem;
+    }
+    .clg-btn{
+      font-size: 1rem;
+      margin: 1rem 0rem;
+    }
+    .feature-box{
+      padding: 1rem !important;
     }
     .spon{
         height: 100px;
@@ -73,8 +122,11 @@ left: 600px;
     }
 }
 .inimg{
-    height: 200px;
-    width: 200px;
+    height: 13rem;
+    width: auto;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    border-radius: 2rem;
     
 }
 
@@ -90,7 +142,7 @@ left: 600px;
   }
  
   .hdg{
-    color: var(--red);
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -129,7 +181,7 @@ left: 600px;
     background-image: url('../images/hackthon2.jpg');
 }
 .abtpara{
-    background-color: white;
+    background-color: transparent;
 }
 .lni{
    font-size: large;
@@ -184,7 +236,7 @@ i{
     padding-bottom: 10px;
   }
 .feature-box{
-    padding: 3% 2%;
+    padding: 0px 2%;
     text-align: center;
     color: black;
     
@@ -256,8 +308,20 @@ i{
 
 
 
+.abtpara p{
+  text-align: justify;
+  color: var(--ltblue);
+}
 
+.incen-hd{
+  color: var(--ltblue);
+  font-weight: 700;
+}
 
+.incen-txt{
+  color: var(--ltblue);
+  font-weight: 500;
+}
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -280,9 +344,12 @@ i{
 }
 .abthead{
   padding: 10px;
+  color: var(--ltblue);
+  font-weight: 700;
 }
 .abtpara{
   padding: 10px;
+  font-weight: 500;
 }
 .tmlnhead{
   text-align: center;
@@ -520,4 +587,254 @@ i{
 
 *{
   font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* FOOTER STYLES */
+.footer{
+  padding: 0px;
+}
+
+.hd-img{
+  height: 180px;
+  padding: 0px;
+  color: var(--bgclr);
+}
+
+.img-bg{
+  background-image: url(../../../assets/img/Chirag.svg);
+}
+
+.hd-dets{
+  vertical-align: middle;
+  padding: 0px;
+}
+
+.hd-info{
+  font-size: 1.1rem;
+  margin: 3px 0px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hd-name{
+  font-size: 1.5rem;
+  color: var(--bgclr);
+}
+
+.port-name{
+  font-size: 1.3rem;
+  color: var(--bgclr);
+}
+
+.hd-mob .fa{
+  font-size: 0.9em;
+}
+
+.hd-icons{
+  display: none;
+}
+
+.hd-info i{
+  margin: 5px;
+  color: var(--bgclr);
+}
+
+.hd-info a{
+  color: var(--bgclr);
+}
+
+.ecell-wrap h2{
+  margin: 20px 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  /* background-color: #5C5F6D; */
+  font-family: 'Merriweather Sans', sans-serif;
+  word-spacing: 3px;
+  color: var(--bgclr) !important;
+}
+
+.clg-btn{
+  background-color: var(--ltblue);
+  color: var(--bgclr);
+  font-weight: 600;
+}
+
+.clg-btn:hover{
+  background-color: var(--ltblue);
+  color: var(--bgclr);
+}
+
+.social-wrap i{
+  margin: 10px 20px;
+  /* margin-top: 5px; */
+  font-size: 30px;
+  color: var(--bgclr);
+}
+
+.info-wrap{
+  padding: 0px 10px;
+}
+
+.overall-wrap{
+  padding: 0px;
+}
+
+.cari-wrap{
+  padding: 0px;
+  padding-left: 3px;
+}
+
+.hd-dets-wrap, .social-wrap, .ecell-wrap{
+  padding: 0px;
+}
+
+.hd-dets-wrap{
+  margin-top: 7px;
+}
+
+.events-info{
+  color: var(--bgclr);
+  /* margin: 0px 5px; */
+  /* margin-top: 2px; */
+  /* word-spacing: 5px; */
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+}
+
+.events-info a{
+  color: var(--bgclr);
+  margin: 0px 10px;
+  margin-top: 2px;
+  word-spacing: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.footer{
+  background-color: var(--ltblue);
+}
+
+
+.hd-icons i{
+  color: var(--bgclr);
+}
+
+/* Mobile View */
+
+
+@media all and (max-width:576px){
+    
+  .ecell-logo{
+      height: 60px;
+  }
+
+  .survey-head{
+      font-size: 1.03rem;
+  }   
+
+  .main-nav{
+      padding: 0px;
+  }
+
+  .thank{
+      background-image: url("../../../assets/img/MaskGroup3@2x.png");    
+  }
+
+  .info-text{
+      font-size: 17px;
+  }
+
+  .sur-info-lg{
+      display: block;
+      font-size: 10px;
+  }
+
+  .sur-info-mob{
+      display: none;
+  }
+
+  .tag-wrap{
+      padding: 0px;
+  }
+
+  .ecell-wrap h2{
+      font-size: 0.9rem;
+  }
+
+  .events-info a{
+      font-size: 10px;
+      margin: 0px 4px;
+  }
+
+  .social-wrap i{
+      font-size: 15px;
+      margin: 10px 10px;
+  }
+
+  .hd-icons-lg{
+      display: none;
+  }
+
+  .hd-icons{
+      display: block;
+      color: var(--white);
+  }
+
+  .hd-icons a{
+      margin: 5px;
+      color: var(--white);
+  }
+
+  .hd-img{
+      padding: 10px;
+      height: 100px;
+  }
+
+  .hd-info{
+      font-size: 12px;
+      text-align: center;
+  }
+
+  .hd-dets{
+      padding-left: 0px;
+  }
+
+  .cari-wrap, .info-wrap{
+      padding: 0px 2px;
+  }
+
+  .nav-link{
+      font-size: 13px !important;
+  }
+
+  #manasvi .hd-name{
+      margin: 0px 30px;
+  }
+  #manasvi .port-name{
+      margin: 0px 30px;
+  }
+  #chirag .hd-name{
+      margin: 0px 30px;
+  }
+  #chirag .port-name{
+      margin: 0px 30px;
+  }
+  #bhandari .hd-name{
+      margin: 0px 30px;
+  }
+  #bhandari .port-name{
+      margin: 0px 30px;
+  }
+
+}
+
+
+.intro{
+  margin-top: 6rem;
 }
