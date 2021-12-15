@@ -8,8 +8,10 @@ body{
 
 :root{
   --bgclr: #1d3557;
+  /* --bgclr: #a8dadc; */
   --blue: #457b9d;
   --ltblue: #a8dadc;
+  /* --ltblue: #1d3557; */
   --white: #f1faee;
   --red: #e63946;
 }
@@ -21,12 +23,14 @@ left: 600px;
 } */
 .jumbotron{
     /* background-image: url('../images/hack.jpg') ; */
-    background-color: #1d3557;
+    background-color: var(--bgclr);
+    /* background-image: linear-gradient(to bottom right, var(--bgclr), var(--ltblue)); */
     /* height: 100vh; */
     background-size: cover;
     background-position: center;
     color: #ffffff;
     border-radius: 0px!important;
+    width: 100vw;
 }
 
 .logo-ecell{
@@ -47,18 +51,24 @@ left: 600px;
 
 .presenter{
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 .presenter-sml{
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .titl{
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--red);
     font-family: 'Montserrat', sans-serif;
+}
+
+.btn-new{
+  color: var(--bgclr) !important;
+  text-decoration: none;
+  margin: 0px 1rem;
 }
 @media(max-width:1028px){
     .logo-ecell{
@@ -135,6 +145,7 @@ left: 600px;
     background-size: cover;
     background-position: center;
     background-color: var(--bgclr);
+    /* background-image: linear-gradient(var(--ltblue), var(--bgclr)); */
       color: var(--white);
       
       
@@ -239,7 +250,7 @@ i{
     padding: 0px 2%;
     text-align: center;
     color: black;
-    
+    margin-top: 2rem;
 }
  body{
     background-color: var(--bgclr);
@@ -664,6 +675,9 @@ i{
 .clg-btn:hover{
   background-color: var(--ltblue);
   color: var(--bgclr);
+  box-shadow: 0px 0px 3px 3px var(--white);
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
 .social-wrap i{
@@ -836,5 +850,6 @@ i{
 
 
 .intro{
-  margin-top: 6rem;
+  margin-top: 11rem;
+  margin-bottom: 8rem;
 }
