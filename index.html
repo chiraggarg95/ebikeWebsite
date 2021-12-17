@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="CSs\styleS.css">
+  <link rel="stylesheet" href="CSs/timeline.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -24,6 +25,91 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
     rel="stylesheet">
+
+    <script>
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("mydiv"));
+  
+      function dragElement(elmnt) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+  
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+  
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        }
+  
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+  
+      
+  
+    </script>
+    <script>
+      (function () {
+  "use strict";
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+})();
+
+    </script>
+    
 
 </head>
 
@@ -54,57 +140,14 @@
 
   </div> -->
 
-  <script>
-    //Make the DIV element draggagle:
-    dragElement(document.getElementById("mydiv"));
-
-    function dragElement(elmnt) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-      } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-      }
-
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-      }
-
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-
-      function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-  </script>
+ 
 
 
 
   <!---navbar end-->
 
   <section id="introduction" class="my-0">
+    <!-- <H1 class="text-center hdg">Timeline</H1> -->
     <div class="jumbotron text-center">
       <img class="logo logo-ecell" src="https://public-ecell.s3.ap-south-1.amazonaws.com/website/E-Cell.png">
 
@@ -204,7 +247,87 @@
         </div>
     </section>
     <br>
+    <!-- Takes an ordered list and renders a responsive timeline try resizing the viewport -->
+    
 
+      <h1>Responsive vertical timeline</h1>
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="content">
+              <h3>Registration opens & Team starts Working</h3>
+             
+            </div>
+            <div class="time">
+              <h4>13th December 2021</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>Registration Closes</h3>
+              
+            </div>
+            <div class="time">
+              <h4>7th January 2022</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>Introduction Session</h3>
+              
+            </div>
+            <div class="time">
+              <h4>9th January 2022</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>Feedback to teams</h3>
+              
+            </div>
+            <div class="time">
+              <h4>16th January 2022</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>First Submission and feedback</h3>
+             
+            </div>
+            <div class="time">
+              <h4>23rd January 2022</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>Final Submission</h3>
+              
+            </div>
+            <div class="time">
+              <h4>30th January 2022</h4>
+            </div>
+          </li>
+          
+          <li>
+            <div class="content">
+              <h3>Top 10 teams to be announced</h3>
+              
+            </div>
+            <div class="time">
+              <h4>1st February 2022</h4>
+            </div>
+          </li>
+          
+         
+          <div style="clear:both;"></div>
+        </ul>
+      </div>
+  
     <!-- <p class="text-center quote1"><b>“It takes a great man to be a good listener.”</b> ― Calvin Coolidge</p> -->
 
     <!-- <section id="details">
@@ -947,6 +1070,8 @@
 
 
   </div>
+ 
 </body>
+
 
 </html>
